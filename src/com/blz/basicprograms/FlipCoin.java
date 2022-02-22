@@ -10,7 +10,7 @@ public class FlipCoin {
         int flips = input.nextInt();
 
         int heads = 0, tails = 0,coin=1;
-        float HeadsPercentage,TailsPercentage;
+        double HeadsPercentage,TailsPercentage;
 
         while (coin<=flips) {
             double random = Math.random();
@@ -25,8 +25,8 @@ public class FlipCoin {
             coin++;
         }
         System.out.println("Heads flipped "+heads+" times and Tails flipped "+tails+" times");
-        HeadsPercentage=(float)((heads*100)/flips);
-        TailsPercentage=(float)((tails*100)/flips);
+        HeadsPercentage=(double)((heads*100)/flips);
+        TailsPercentage=100-HeadsPercentage;
         System.out.println("Heads percentage is "+HeadsPercentage+"");
         System.out.println("Tails percentage is "+TailsPercentage+"");
 
